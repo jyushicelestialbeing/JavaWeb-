@@ -61,7 +61,7 @@
       }
       ```
       xml文件
-      
+      ```
       <?xml version="1.0" encoding="UTF-8"?>
       <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -86,6 +86,6 @@
             <url-pattern></url-pattern>
          </servlet-mapping>
       </web-app>
-      
+      ```
 访问 127.0.0.1:端口号/ 可以看到从init-param中获取的hahaha这一字符串
    
