@@ -25,6 +25,7 @@
       ```
    - 直接集成Servlet类就可以了，继承后需要实现四个接口 init getServletConfig() getServletInfo() destroy() service(ServletRequest servletRequest, ServletResponse servletResponse)
    - 分别对应初始化，获取服务配置信息，获取服务信息，销毁时执行，服务本身
+   - web.xml没啥可说的，直接举例
    - 举个例子
       ```java
          import javax.servlet.*;
@@ -58,7 +59,7 @@
             System.out.println("销毁");
          }
       }
-      
+      ```
       xml文件
       
       <?xml version="1.0" encoding="UTF-8"?>
@@ -86,4 +87,5 @@
          </servlet-mapping>
       </web-app>
       
+访问 127.0.0.1:端口号/ 可以看到从init-param中获取的hahaha这一字符串
    
