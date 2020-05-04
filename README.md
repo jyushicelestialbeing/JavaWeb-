@@ -23,4 +23,40 @@
       ```java
       import javax.servlet.*;
       ```
+   - 直接集成Servlet类就可以了，继承后需要实现四个接口 init getServletConfig() getServletInfo() destroy() service(ServletRequest servletRequest, ServletResponse servletResponse)
+   - 分别对应初始化，获取服务配置信息，获取服务信息，销毁时执行，服务本身
+   - 举个例子
+      ```java
+         import javax.servlet.*;
+         import java.io.IOException;
+
+         public class MyServlet implements Servlet {
+         @Override
+         public void init(ServletConfig servletConfig) throws ServletException {
+            System.out.println("初始化");
+         }
+
+         @Override
+         public ServletConfig getServletConfig() {
+              return null;
+         }
+   
+         @Override
+         public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
+            System.out.println("启动");
+            servletResponse.getWriter().write("Helloworld");
+
+         }
+   
+         @Override
+         public String getServletInfo() {
+            return null;
+         }
+
+         @Override
+         public void destroy() {
+            System.out.println("销毁");
+         }
+      }
+      ```
    
