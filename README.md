@@ -19,4 +19,8 @@
    - 127.0.0.1:端口号/xxxxx/你的类映射名 用于访问你的Servlet类，而不是很多教程中 127.0.0.1：端口号/类名 这样会404
    - 不需要自己在项目中创建classes和lib文件夹
 ## Servlet使用
-   - 
+   - 导入Servlet接口
+   ```java
+   import javax.servlet.*;
+   ```
+   
